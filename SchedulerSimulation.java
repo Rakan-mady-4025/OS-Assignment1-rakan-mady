@@ -31,7 +31,8 @@ class Process implements Runnable {
     private int remainingTime; // Time left for the process to finish its execution
     //-- add feature 1 a priority attribute to the Process class--
     private int priority; // Priority of the process (It is between 1 and 10, where 10 is the highest priority and 1 is the lowest)
-  
+      //-- add feature 2 a counter attribute to the Process class--
+    static int counter = 0; // Static counter to track the number of context switches
 
     // Constructor to initialize the process with name, burst time, and time quantum
     public Process(String name, int burstTime, int timeQuantum) {
@@ -46,6 +47,8 @@ class Process implements Runnable {
     // This method will be called when the thread for this process is started
     @Override
     public void run() {
+        //-- add feature 2 a counter increment counter at each switch--
+        counter++; // Increment the context switch counter each time a process is run
         // Simulate running for either the time quantum or remaining time, whichever is smaller
         int runTime = Math.min(timeQuantum, remainingTime); // Run for the smaller of the two times
         
@@ -114,6 +117,8 @@ class Process implements Runnable {
 
     // Method to run the last process to completion, ignoring the time quantum
     public void runToCompletion() {
+        //-- add feature 2 a counter increment counter at each switch--
+        counter++; // Increment the context switch counter for the last process
         try {
             // Run for the remaining time without splitting into smaller time slices
             System.out.println(Colors.BRIGHT_CYAN + "  ⚡ " + Colors.BOLD + Colors.CYAN + name + 
@@ -149,6 +154,9 @@ class Process implements Runnable {
     public int getPriority() {
         return priority;
     }
+    public static int getCounter() {
+        return counter;
+    }
 }
 
 public class SchedulerSimulation {
@@ -156,7 +164,8 @@ public class SchedulerSimulation {
         // ⚠️ IMPORTANT: Put your student ID here to seed the random number generator
         // This makes your output unique to you - DO NOT forget to change this!
         int studentID = 445052810;  // ← CHANGE THIS TO YOUR ACTUAL STUDENT ID
-        
+       
+
         Random random = new Random(studentID);
         
         // Define the time quantum in milliseconds (the maximum time a process gets in one round)
@@ -263,6 +272,8 @@ public class SchedulerSimulation {
                 if (!processQueue.isEmpty()) {
                     // Re-enqueue the process to give it another chance to run in the next round
                     addProcessToQueue(process, processQueue, processMap);
+                    
+                    
                 } else {
                     // If this is the last process in the queue, run it to completion
                     System.out.println(Colors.BRIGHT_YELLOW + "  ⚠ " + Colors.CYAN + process.getName() + 
@@ -284,6 +295,8 @@ public class SchedulerSimulation {
         System.out.println(Colors.BOLD + Colors.BRIGHT_GREEN + 
                           "╚════════════════════════════════════════════════════════════════════════════════╝" + 
                           Colors.RESET + "\n");
+                           //-- add feature 2 print total context switches --
+                           System.out.println("Total context switches: " + Process.getCounter()); // Print the total number of context switches that occurred during the simulation
     }
     
     // Method to add a process to the queue and map, while printing a "ready" message
@@ -304,6 +317,7 @@ public class SchedulerSimulation {
                           " │ Burst time: " + Colors.YELLOW + process.getBurstTime() + "ms" + 
                           // -- add feature 1: print the priority of the process --
                           Colors.RESET+ " │ Priority: " + Colors.YELLOW + process.getPriority() + Colors.RESET); 
-
+                       
     }
+    
 }
