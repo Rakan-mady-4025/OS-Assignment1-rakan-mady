@@ -29,6 +29,9 @@ class Process implements Runnable {
     private int burstTime; // Total time the process requires to complete (in milliseconds)
     private int timeQuantum; // Time slice (time quantum) allowed per CPU access (in milliseconds)
     private int remainingTime; // Time left for the process to finish its execution
+    //-- add feature 1 a priority attribute to the Process class--
+    private int priority; // Priority of the process (It is between 1 and 10, where 10 is the highest priority and 1 is the lowest)
+  
 
     // Constructor to initialize the process with name, burst time, and time quantum
     public Process(String name, int burstTime, int timeQuantum) {
@@ -36,6 +39,8 @@ class Process implements Runnable {
         this.burstTime = burstTime;
         this.timeQuantum = timeQuantum;
         this.remainingTime = burstTime; // Initially, remaining time is equal to the burst time
+        //--add feature 1 a priority random value--
+        this.priority = new Random().nextInt(10) + 1; // Assign a random priority (random value between 1 and 10)
     }
 
     // This method will be called when the thread for this process is started
@@ -140,6 +145,9 @@ class Process implements Runnable {
     // Check if the process has finished (i.e., no remaining time)
     public boolean isFinished() {
         return remainingTime <= 0;
+    }
+    public int getPriority() {
+        return priority;
     }
 }
 
@@ -294,6 +302,8 @@ public class SchedulerSimulation {
         System.out.println(Colors.BLUE + "  ➕ " + Colors.BOLD + Colors.CYAN + process.getName() + 
                           Colors.RESET + Colors.BLUE + " added to ready queue" + Colors.RESET + 
                           " │ Burst time: " + Colors.YELLOW + process.getBurstTime() + "ms" + 
-                          Colors.RESET);
+                          // -- add feature 1: print the priority of the process --
+                          Colors.RESET+ " │ Priority: " + Colors.YELLOW + process.getPriority() + Colors.RESET); 
+
     }
 }
