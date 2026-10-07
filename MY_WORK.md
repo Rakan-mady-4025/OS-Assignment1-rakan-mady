@@ -125,6 +125,10 @@
 
 **Time spent**: 30 minutes
 
+## Your Development Log
+
+
+
 ## Entry 1 - [October 7, 2026, 10:55 AM]
 **What I did**: Forked the repository and set up my student ID.
 
@@ -174,84 +178,20 @@
 **Time spent**: 5 hours
 
 ---
-
-## Your Development Log
-
-### Entry 1 - [Date and Time]
-**What I did**:
+## Entry 4 - [October 7, 2026, 11:20 AM]
+**What I did**: Implemented waiting time calculation and average waiting time output.
 
 **Details**:
 
-**Challenges**:
+-Wrote a dedicated method to calculate the waiting time for each individual process.
+-Formatted the output to clearly display the waiting time per process.
+-Calculated and printed the overall average waiting time across all processes.
 
-**Solution**:
+**Challenges**: Accounting for burst times and arrival times correctly during calculations to prevent negative values.
 
-**Time spent**:
+**Solution**: Verified process completion timestamps against arrival times and total CPU burst durations.
 
----
-
-### Entry 2 - [Date and Time]
-**What I did**:
-
-**Details**:
-
-**Challenges**:
-
-**Solution**:
-
-**Time spent**:
-
----
-
-### Entry 3 - [Date and Time]
-**What I did**:
-
-**Details**:
-
-**Challenges**:
-
-**Solution**:
-
-**Time spent**:
-
----
-
-### Entry 4 - [Date and Time]
-**What I did**:
-
-**Details**:
-
-**Challenges**:
-
-**Solution**:
-
-**Time spent**:
-
----
-
-### Entry 5 - [Date and Time]
-**What I did**:
-
-**Details**:
-
-**Challenges**:
-
-**Solution**:
-
-**Time spent**:
-
----
-
-### Entry 6 - [Optional - Date and Time]
-**What I did**:
-
-**Details**:
-
-**Challenges**:
-
-**Solution**:
-
-**Time spent**:
+**Time spent**: 8 hour
 
 ---
 
