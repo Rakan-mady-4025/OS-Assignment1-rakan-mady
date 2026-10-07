@@ -143,6 +143,20 @@
 
 **Time spent**: 15 minutes
 
+## Entry 2 - [October 7, 2026, 11:02 AM]
+**What I did**: Analyzed and understood the provided starter code.
+
+**Details**:
+
+-Reviewed the core classes, methods, and existing scheduler implementation structure.
+-Traced how processes and queues are managed within the codebase.
+-Added comments and notes to clarify the execution flow.
+
+**Challenges**: Understanding how process states transition within the multithreaded simulation structure.
+
+**Solution**: Traced the execution step-by-step using a debugger and reviewed the documentation.
+
+**Time spent**: 3 hours
 
 ---
 
