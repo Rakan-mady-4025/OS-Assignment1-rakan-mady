@@ -158,6 +158,7 @@
 
 **Time spent**: 3 hours
 
+## Entry 3 - [October 7, 2026, 11:11 AM]
 **What I did**: Implemented Feature 1 (Priority-based scheduling) and Feature 2 (Context switch counter).
 
 **Details**:
