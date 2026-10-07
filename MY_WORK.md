@@ -158,6 +158,20 @@
 
 **Time spent**: 3 hours
 
+**What I did**: Implemented Feature 1 (Priority-based scheduling) and Feature 2 (Context switch counter).
+
+**Details**:
+
+-Added priority handling logic to modify process queue ordering based on priority levels.
+-Implemented a context switch counter variable to track and increment every time the CPU switches from one process to another.
+-Integrated both features into the main scheduling loop.
+
+**Challenges**: Ensuring thread safety and correct order when inserting high-priority processes into the ready queue.
+
+**Solution**: Used proper synchronization blocks and adjusted queue insertion logic.
+
+**Time spent**: 5 hours
+
 ---
 
 ## Your Development Log
