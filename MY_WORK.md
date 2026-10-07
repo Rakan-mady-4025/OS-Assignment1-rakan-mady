@@ -29,11 +29,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | [rakan khaled mady |
+| **Student ID** | [445052810] |
+| **University Email** | [445052810]@std.psau.edu.sa |
+| **GitHub Username** | [Rakan-mady-4025] |
+| **Repository Link** | [https://github.com/Rakan-mady-4025/OS-Assignment1-rakan-mady.git] |
  
 ---
 
@@ -124,6 +124,25 @@
 **Solution**: Downloaded JDK 17 and set the PATH variable
 
 **Time spent**: 30 minutes
+
+## Entry 1 - [October 7, 2026, 10:55 AM]
+**What I did**: Forked the repository and set up my student ID.
+
+**Details**:
+
+-Created a GitHub account with my university email.
+
+-Forked the starter repository and renamed it.
+-Changed student ID on line 150 to my actual ID (445052810).
+-Compiled and ran the program successfully.
+-Committed and pushed: Set my student ID: 445052810.
+
+ **Challenges**: Had to install JDK first because javac wasn't recognized.
+
+**Solution**: Downloaded JDK and set the PATH environment variable.
+
+**Time spent**: 15 minutes
+
 
 ---
 
