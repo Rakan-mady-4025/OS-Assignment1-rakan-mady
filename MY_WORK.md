@@ -213,13 +213,13 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [18.15 hours]
 
-**Most challenging part**:
+**Most challenging part**: Comprehending the complex structure of the provided starter code and grasping how threads execute concurrently in a realistic simulation. Specifically, figuring out how to properly embed and integrate thread-safe properties and custom methods (such as priority handling and context switch counters) into the multithreaded environment without causing synchronization conflicts or race conditions.
 
-**Most interesting learning**:
+**Most interesting learning**: Understanding the inner workings of the Round-Robin CPU scheduling algorithm, particularly how the time quantum is accurately allocated and managed during each entry of a process into the CPU. Additionally, learning how to effectively leverage Object-Oriented Programming (OOP) principles to inherit properties, encapsulate states, and perform clean method invocations across classes.
 
-**What I would do differently next time**:
+**What I would do differently next time**: Plan to build several practical projects focused specifically on strengthening multithreading and parallel programming concepts, especially after realizing how almost all modern applications heavily rely on multithreading to achieve high performance and responsiveness.
 
 ---
 
