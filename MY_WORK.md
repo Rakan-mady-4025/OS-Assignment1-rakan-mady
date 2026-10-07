@@ -193,6 +193,20 @@
 
 **Time spent**: 8 hour
 
+## Entry 5 - [October 7, 2026, 11:32 AM]
+**What I did**: Final testing, debugging, and code cleanup.
+
+**Details**:
+
+-Tested all implemented features (student ID, priority, context switch counter, and waiting times) with various test cases.
+-Cleaned up the code structure, removed redundant print statements, and added proper comments.
+-Prepared the final files and documentation for submission.
+
+**Challenges**: Minor edge cases where waiting times miscalculated under specific queue conditions.
+
+**Solution**: Applied additional validation checks before computing averages.
+
+**Time spent**: 2 hours
 ---
 
 ## Development Log Summary
