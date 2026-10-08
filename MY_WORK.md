@@ -239,7 +239,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+While developing the CPU scheduler simulation in Java, I deeply learned how to implement multithreading to execute processes concurrently. I realized that threads can be created either by extending the Thread class or by implementing the Runnable interface for better design flexibility. Throughout the project, I practically handled lifecycle management methods such as sleep() to control the simulation's timing pauses. I also utilized the join() method to ensure the main system waits until background processes finish completely before printing final results. Furthermore, I explored synchronization mechanisms like wait() to manage the interaction between processing threads within queues. These concepts directly helped me build an accurate and stable simulator that effectively reflects the reality of modern operating systems.
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -247,7 +247,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+The most challenging part of this assignment was initially understanding the existing code's architecture and mechanism, which required a significant amount of time and deep analysis. Once I grasped the core structure, the implementation phase became relatively straightforward, except for the tedious process of tracing the code and managing Git and GitHub workflows. Additionally, integrating the different components posed a challenge, especially when dealing with unfamiliar methods required for accurate time calculation. Writing these time-tracking routines demanded a high level of logical thinking and precision. Overcoming these hurdles significantly enhanced my problem-solving skills and my confidence in handling complex multithreaded systems.
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -255,7 +255,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+To overcome the challenges I faced, I carefully read through the existing source code multiple times to grasp its underlying logic. I also conducted various experiments and ran the program repeatedly to observe how it behaved in practice. Stepping through the execution flow line by line helped me connect the different components together successfully. This hands-on, trial-and-error approach clarified how the methods interacted within the multithreaded environment. Moreover, breaking down the complex sections into smaller, testable parts made the debugging process much more manageable. Ultimately, patience and persistent code tracing allowed me to conquer the difficulties and complete the simulation effectively
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -263,19 +263,17 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+The multithreading and concurrency concepts we applied in our CPU scheduler can be directly integrated into many real-world applications. For instance, web browsers allocate separate threads to load multiple pages and run scripts simultaneously without freezing the user interface. In media players, background threads allow audio tracks to play smoothly while the user navigates through different parts of the application. Similarly, mobile apps and video games use task queues and scheduling algorithms to distribute heavy calculations across processor cores. This approach is conceptually identical to how we managed process queues and controlled timing in our simulator to execute tasks concurrently. Ultimately, implementing these multithreaded techniques maximizes hardware resource utilization and vastly improves the overall user experience.
 
 ### Optional: What would you like to learn more about?
 
-[Any topics related to threading or operating systems that you're curious about?]
-
+no answer
 ### Optional: How confident do you feel about multithreading concepts now?
 
-[Beginner / Intermediate / Confident. What do you understand well? What needs more practice?]
-
+no answer
 ### Optional: Feedback on the assignment
 
-[Any comments? Was it helpful? Too easy or hard? Suggestions?]
+no answer
 
 ---
 
@@ -295,7 +293,8 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+A process represents an independent execution environment with its own isolated memory space, whereas threads are lighter execution units divided from the main process that run concurrently to fully utilize available CPU cores and processors. While processes do not share memory directly, threads share the same address space and memory resources.
+Regarding SchedulerSimulation.java, the simulated processes function as threads because the process class implements the Runnable interface, allowing multiple execution threads to run in parallel within the same program context.
 
 ## Question 2: Ready Queue Behavior
 
@@ -307,15 +306,26 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+When a process exceeds its assigned time quantum, the OS interrupts its execution, performs a context switch, and moves it to the back of the ready queue. In your simulation, a process with a longer burst time was re-queued two times before finishing its execution. This re-queueing mechanism is vital for fairness because it prevents long-running processes from starving others, ensuring all tasks get an equitable share of CPU time
 
 Example from my output:
 ```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
+[P3 ظْ P4 ظْ P5 ظْ P6 ظْ P7 ظْ P8 ظْ P9 ظْ P10 ظْ P11 ظْ P12 ظْ P13 ظْ P14 ظْ P15 ظْ P16 ظْ P17 ظْ P18 ظْ P19]
+ظ¤¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤
+
+  ظû╢ P2 executing quantum [4000ms] 
+  ظأة Quantum progress: [ظûêظûêظûêظûêظûêظûêظûêظûêظûêظûêظûêظûêظûêظûêظûê] 100%
+  ظ╕ P2 completed quantum 4000ms ظ¤é Overall progress: [ظûêظûêظûêظûêظûêظûêظûêظûêظûّظûّظûّظûّظûّظûّظûّظûّظûّظûّظûّظûّ] 42%
+     Remaining time: 5327ms
+  ظ╗ P2 yields CPU for context switch
+
+  ظئـ P2 added to ready queue ظ¤é Burst time: 9327ms ظ¤é Priority: 10
+ظ¤îظ¤ Ready Queue ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤ظ¤
+ظ¤é [P4 ظْ P5 ظْ P6 ظْ P7 ظْ P8 ظْ P9 ظْ P10 ظْ P11 ظْ P12 ظْ P13 ظْ P14 ظْ P15 ظْ P16 ظْ P17 ظْ P18 ظْ P19 ظْ P2]
 ```
 
 **Explanation of example:**
-[Explain what is happening in the output snippet you pasted.]
+in the given examle the p2 enter the cpu and finish it's quantom the the disdispatcher excute cotext switch then add p2 to ready queue
 
 ## Question 3: Thread Lifecycle
 
@@ -325,15 +335,20 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+1. **New**: P1 enters the New state the moment its corresponding Thread object is instantiated in memory, before the system allocates any execution resources to it. 
+Thread thread = new Thread(process);
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**: After being added to the ready queue (processQueue), the scheduler polls P1's thread and invokes its start method. The thread is now ready and waiting for the JVM thread scheduler to allocate CPU time.
+currentThread.start();
 
-3. **Running**: [When is P1 Running?]
+3. **Running**: Once the JVM thread scheduler assigns CPU execution time to P1, the thread enters the Running state and begins executing its assigned task.
+the run methode in the class prosecc public void run ().
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+4. **Waiting**: Enters a timed waiting state while simulating the quantum execution progress.
+Thread.sleep(stepTime);
 
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**: P1 enters the Terminated state once it has exhausted its remaining burst.
+MarkisFinished();
 
 ## Question 4: Real-World Applications
 
@@ -343,32 +358,32 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [Name of scenario]
+Example 1 (operating-system level): Multi-Tasking Operating System CPU Scheduling
 
 **Description**:
-[Describe the real-world scenario.]
+An operating system managing multiple running user applications (such as a web browser, a music player, and a text editor) on a single CPU core.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+Round-robin scheduling works exceptionally well here because it guarantees fairness and high responsiveness by giving each active program an equal, cyclical slice of CPU time (the time quantum). This prevents any single compute-heavy application from freezing the system, ensuring smooth multitasking for the user. (In relation to your simulation, the running applications act as the "processes", the CPU time slice acts as the "time quantum", and saving/restoring register states acts as the "context switch".)
 
-### Example 2: [Name of application/scenario]
+Example 2: Multiplayer Game Server Tick Processing
 
 **Description**:
-[Describe the real-world scenario or application.]
+A real-time multiplayer game server managing player actions, physics updates, and network events for dozens of connected players simultaneously.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+Round-robin scheduling ensures predictability and fairness by serving each player's action queue in equal, rapid turns so that no single player's complex action lags behind or starves others of server processing time. This maintains an equitable, synchronized, and smooth real-time experience across all participants. (In relation to your simulation, the player action queues act as the "processes", the processing time slice acts as the "time quantum", and thread switching acts as the "context switch".)
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1. thread life cycle.
+2. multyprogram
+3. thread class 
 
 **Concepts I need to study more:**
-1.
-2.
+1. how to implement parllism in real project
+2. more use od another need methode 
 
 ---
 
