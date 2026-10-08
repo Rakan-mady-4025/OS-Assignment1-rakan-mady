@@ -29,7 +29,7 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [rakan khaled mady |
+| **Full Name** | [rakan khaled mady] |
 | **Student ID** | [445052810] |
 | **University Email** | [445052810]@std.psau.edu.sa |
 | **GitHub Username** | [Rakan-mady-4025] |
