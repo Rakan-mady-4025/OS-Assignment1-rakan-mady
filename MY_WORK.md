@@ -29,17 +29,17 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [rakan khaled mady] |
-| **Student ID** | [445052810] |
-| **University Email** | [445052810]@std.psau.edu.sa |
-| **GitHub Username** | [Rakan-mady-4025] |
-| **Repository Link** | [https://github.com/Rakan-mady-4025/OS-Assignment1-rakan-mady.git] |
+| **Full Name** | rakan khaled mady |
+| **Student ID** | 445052810 |
+| **University Email** | 445052810@std.psau.edu.sa |
+| **GitHub Username** | Rakan-mady-4025 |
+| **Repository Link** | https://github.com/Rakan-mady-4025/OS-Assignment1-rakan-mady.git |
  
 ---
 
 ## 🎥 Video Link
 
-**Video Link**: [Paste your video link here]
+**Video Link**: https://youtu.be/UBBK8rVr8pM
 
 > ⚠️ **WARNING:** The video must be **publicly accessible** ("Anyone with the link can view") on **Google Drive**, **YouTube (Unlisted or Public)** or any other cloud file-sharing system. A private, restricted or broken link counts as a **missing video (-1 mark)**.
 >
